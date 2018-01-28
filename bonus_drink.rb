@@ -1,14 +1,14 @@
 class BonusDrink
   def self.total_count_for(amount)
     if amount >= 3
-      sum = amount
+      total = amount
       bonus, amari = amount.divmod(3)
-      sum += bonus
+      total += bonus
       while bonus + amari >= 3
         bonus, amari = (bonus + amari).divmod(3)
-        sum += bonus
+        total += bonus
       end
-      sum
+      total
     else
       amount
     end
